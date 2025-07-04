@@ -7,7 +7,7 @@ export async function middleware(req: NextRequest) {
   const res = await fetch(url)
 
   const response = NextResponse.next()
-  response.headers.set('fetch-duration', Date.now() - start)
+  response.headers.set('fetch-duration', `${Date.now() - start}`)
 
   return response
 }
